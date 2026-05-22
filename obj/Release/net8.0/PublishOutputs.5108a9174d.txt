@@ -1,0 +1,7 @@
+C:\az\MiPaginaAzure\bin\Release\net8.0\publish\MiPaginaAzure.exe
+C:\az\MiPaginaAzure\bin\Release\net8.0\publish\appsettings.Development.json
+C:\az\MiPaginaAzure\bin\Release\net8.0\publish\appsettings.json
+C:\az\MiPaginaAzure\bin\Release\net8.0\publish\MiPaginaAzure.dll
+C:\az\MiPaginaAzure\bin\Release\net8.0\publish\MiPaginaAzure.deps.json
+C:\az\MiPaginaAzure\bin\Release\net8.0\publish\MiPaginaAzure.runtimeconfig.json
+C:\az\MiPaginaAzure\bin\Release\net8.0\publish\MiPaginaAzure.pdb

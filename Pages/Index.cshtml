@@ -1,0 +1,479 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "AZ-400";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>AZ-400 Curso Microsoft Erik Nuñez</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:#020617;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 70px;
+    border-bottom:1px solid #1e293b;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:0.3s;
+    font-size:17px;
+}
+
+.menu a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:120px 80px;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero-text h1{
+    font-size:70px;
+    margin-bottom:25px;
+    line-height:1.1;
+}
+
+.hero-text span{
+    color:#38bdf8;
+}
+
+.hero-text p{
+    font-size:22px;
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+.hero-buttons{
+    margin-top:40px;
+}
+
+.btn{
+    padding:16px 35px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+    margin-right:15px;
+}
+
+.btn-primary{
+    background:#0ea5e9;
+    color:white;
+}
+
+.btn-secondary{
+    background:#1e293b;
+    color:white;
+    border:1px solid #334155;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.hero-image{
+    width:45%;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 0 40px rgba(56,189,248,0.4);
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 80px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:60px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#111827;
+    padding:40px;
+    border-radius:20px;
+    transition:0.3s;
+    border:1px solid #1e293b;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#38bdf8;
+}
+
+.card i{
+    font-size:55px;
+    color:#38bdf8;
+    margin-bottom:25px;
+}
+
+.card h2{
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+/* INFO */
+
+.info{
+    background:#111827;
+}
+
+.info-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.info-text{
+    width:50%;
+}
+
+.info-text h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.info-text p{
+    color:#cbd5e1;
+    font-size:20px;
+    line-height:1.7;
+}
+
+.info-image{
+    width:45%;
+}
+
+.info-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:30px;
+    color:#94a3b8;
+}
+
+/* RESPONSIVE */
+
+@@media(max-width:900px){
+
+    .navbar{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    .menu{
+        margin-top:15px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text,
+    .hero-image,
+    .info-text,
+    .info-image{
+        width:100%;
+    }
+
+    .hero-image{
+        margin-top:40px;
+    }
+
+    .hero-text h1{
+        font-size:50px;
+    }
+
+    .info-content{
+        flex-direction:column;
+    }
+
+    section{
+        padding:80px 30px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        AZ-400 Curso Microsoft Erik Nuñez MCT
+    </div>
+
+    <div class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#azure">Azure</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-text">
+
+        <h1>
+            Aprende <span>Azure y DevOps</span> Profesional
+        </h1>
+
+        <p>
+            Cursos Microsoft enfocados en Azure, DevOps,
+            Inteligencia Artificial y tecnologías cloud modernas.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#cursos">
+                <button class="btn btn-primary">
+                    Ver Cursos
+                </button>
+            </a>
+
+            <a href="#contacto">
+                <button class="btn btn-secondary">
+                    Contacto
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+</section>
+
+<!-- CURSOS -->
+
+<section id="cursos">
+
+    <h1 class="section-title">
+        Cursos Microsoft
+    </h1>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-cloud"></i>
+
+            <h2>AZ-104 Azure Administrator</h2>
+
+            <p>
+                Aprende redes virtuales, máquinas virtuales,
+                storage, identidad y administración en Azure.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-gears"></i>
+
+            <h2>AZ-400 DevOps Engineer</h2>
+
+            <p>
+                CI/CD, Azure DevOps, GitHub Actions,
+                automatización y pipelines profesionales.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h2>Azure AI</h2>
+
+            <p>
+                Inteligencia Artificial con Azure OpenAI,
+                Vision Studio y servicios cognitivos.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- AZURE -->
+
+<section class="info" id="azure">
+
+    <div class="info-content">
+
+        <div class="info-text">
+
+            <h2>
+                Microsoft Azure
+            </h2>
+
+            <p>
+                Plataforma cloud empresarial para crear aplicaciones,
+                infraestructura, IA y soluciones modernas escalables.
+            </p>
+
+        </div>
+
+        <div class="info-image">
+
+            <img src="https://learn.microsoft.com/azure/media/index/azure-portal.png">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+    <h1 class="section-title">
+        Contacto
+    </h1>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h2>Email</h2>
+
+            <p>
+                contacto@az400.com
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-brands fa-linkedin"></i>
+
+            <h2>LinkedIn</h2>
+
+            <p>
+                Erik Nuñez MCT
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-brands fa-microsoft"></i>
+
+            <h2>Microsoft Trainer</h2>
+
+            <p>
+                Cursos oficiales y laboratorios prácticos.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    © 2026 AZ-400 Curso Microsoft Erik Nuñez MCT
+
+</footer>
+
+</body>
+</html>
